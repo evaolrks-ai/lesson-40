@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson 40</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+ <style>
+       body{
+           font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+        }
+        .backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 100;
+            transition: 0.4s ease;
+        }
+        .backdrop:hover{
+            background-color: rgba(0, 0, 0, 0.7);
+
+        }
+
+        .backdrop.is-hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .modal {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 700px;
+            min-height: 500px;
+            padding: 24px;
+            background-color: white;
+            border-radius: 4px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+            color: rgb(1, 1, 1);
+
+        }
+
+        .position {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+.btn-close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent/*я тільки узнала tansparent, дуже класна штука*/;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+
+}
+.ewq{
+  font-weight: 300;
+     background: #a8b2bc;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-top: 30px;
+}
+.ewq:hover {
+    background: #1a254a;
+}  
+a{
+    color: white;
+    text-decoration: none;
+}
+p{
+  color: #1a254a;
+  margin-top: 20px;
+  line-height: 1.7;
+  word-spacing: 4px;
+}
+h2{
+   color: #1a254a;
+}
+div{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.btn-open{
+    font-weight: 300;
+     background: #a8b2bc;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+    </style>
+</head>
+
+<body>
+
+    <div><!-- Кнопка відкриття -->
+    <button class="btn-open" data-modal-open>open</button></div>
+
+    <!-- Backdrop + Modal -->
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="btn-close" data-modal-close>✕</button>
+
+            <div class="position">
+                <h2>Збір на мою освіту за кордоном</h2>
+<img src="IMG_3697.jpg" alt="Toronto"width="400">
+                <p>Я вже довгий час серйозно замислююся про вступ до Канади на спеціальність "Computer Science"
+                     Мене приваблює не лише високий рівень освіти, а й можливість навчатися в сучасному середовищі,
+                      де активно розвиваються технології та підтримуються інновації. Канада відома своїми 
+                      університетами, які пропонують сильні програми в галузі ІТ, а також дають студентам 
+                      доступ до реальних проєктів, стажувань і співпраці з провідними компаніями</p>
+                   <button class="ewq"><a href="https://send.monobank.ua/jar/AATNaVdKK1" target="_blank">Jar</a></button>
+                   <p class="joke">P.S. It’s just a joke.</p>
+               
+           
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    
+</body>
+
+</html>
